@@ -1,0 +1,27 @@
+<!-- staff_booking_view.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cricket Bookings</title>
+</head>
+<body>
+    <h1>Cricket Bookings</h1>
+    <table border="1">
+        <tr>
+            <th>Booking ID</th>
+            <th>Date</th>
+            <th>Time Slot</th>
+            <!-- Add more columns as needed -->
+        </tr>
+        {% for booking in cricket_bookings %}
+        <tr>
+            <td>{{ booking.booking_id }}</td>
+            <td>{{ booking.selected_date }}</td>
+            <td>{{ booking.selected_slot }}</td>
+            <!-- Access other fields from the booking object -->
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

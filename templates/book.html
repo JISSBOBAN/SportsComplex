@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SignUp</title>
+</head>
+<body>
+    <h2>User Signup</h2>
+    <form method="post">
+            {% csrf_token %}
+             <label for="sports">Choose a sport:</label>
+        <select id="sports" name="sports">
+            <option value="Football">Football</option>
+            <option value="Basketball">Basketball</option>
+            <option value="Volleyball">Tennis</option>
+            <option value="Cricket">Volleyball</option>
+            <option value="Tennis">Volleyball</option>
+            <option value="Badminton">Volleyball</option>
+            <option value="Chess">Volleyball</option>
+            <option value="Carroms">Volleyball</option>
+            <option value="Swimming">Volleyball</option>
+            <!-- Add more options for different sports -->
+        </select>
+        <br><br>
+
+        <!-- Date Selection -->
+        <label for="date">Select a date:</label>
+        <input type="date" id="date" name="date">
+        <br><br>
+
+        <!-- Time Selection -->
+        <label for="time">Select a time:</label>
+        <select id="time" name="time">
+            <option value="6am-7am">6am-7am</option>
+            <option value="7am-8am">Volleyball</option>
+            <option value="8am-9am">Volleyball</option>
+            <option value="9am-10am">Volleyball</option>
+            <option value="10am-11am">Volleyball</option>
+            <option value="12pm-1pm">Volleyball</option>
+            <option value="1pm-2pm">Volleyball</option>
+            <option value="2pm-3pm">Volleyball</option>
+            <option value="3pm-4pm">Volleyball</option>
+            <option value="11am-12pm">Volleyball</option>
+            <option value="4pm-5pm">Volleyball</option>
+            <option value="5pm-6pm">Volleyball</option>
+            <option value="6pm-7pm">Volleyball</option>
+            <option value="7pm-8pm">Volleyball</option>
+            <option value="8pm-9pm">Volleyball</option>
+            <option value="9pm-10pm">Volleyball</option>
+            <option value="10pm-11pm">Volleyball</option>
+            </select>
+
+        <br><br>
+        <button type="submit">Sign Up</button>
+    </form>
+    <p>After signing up, please check your email to verify your account.</p>
+</body>
+</html>

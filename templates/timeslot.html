@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Time Slot</title>
+</head>
+<body>
+    <h1>Select Time Slot</h1>
+    <form method="post" action="{% url 'confirm_timeslot' %}">
+        {% csrf_token %}
+        <input type="hidden" name="selected_date" value="{{ selected_date }}">
+        <input type="hidden" name="sport_type" value="{{ sport_type }}">
+        <label for="selected_slot">Available Time Slots:</label>
+        <select id="selected_slot" name="selected_slot" required>
+            {% for slot in available_slots %}
+            <option value="{{ slot }}">{{ slot }}</option>
+            {% endfor %}
+        </select><br><br>
+        <button type="submit">Confirm Time Slot</button>
+    </form>
+</body>
+</html>

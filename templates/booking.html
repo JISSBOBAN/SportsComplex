@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking</title>
+</head>
+<body>
+    <h1>Select Date and Sport</h1><a href="/cancel-booking" class="button">Login</a><br>
+    <form method="post" action="confirm_date/">
+        {% csrf_token %}
+        <label for="selected_date">Select Date:</label>
+        <input type="date" id="selected_date" name="selected_date" required><br><br>
+        <label for="sport_type">Select Sport:</label>
+        <select id="sport_type" name="sport_type" required>
+            <option value="football">Football</option>
+            <option value="tennis">Tennis</option>
+            <option value="cricket">Cricket</option>
+            <option value="basketball">Basketball</option>
+            <option value="badminton">Badminton</option>
+            <!-- Add more options for other sports -->
+        </select><br><br>
+        <button type="submit">Confirm Date</button>
+    </form>
+</body>
+</html>

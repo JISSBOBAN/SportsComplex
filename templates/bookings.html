@@ -1,0 +1,32 @@
+<!-- bookings.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Bookings</title>
+</head>
+<body>
+    <h1>Your Bookings</h1>
+    <table border="1">
+        {% for booking in bookings %}
+            <tr>
+               <td> Booking ID: {{ booking.id }}</td>
+                <td>Date: {{ booking.selected_date }}</td>
+                <td>Slot: {{ booking.selected_slot }}</td>
+                <td>Sport Type: {{ booking.sport_type }}</td>
+                <td>User Email: {{ booking.user_email }}</td>
+                <td><form action="{{ booking.cancellation_url }}" method="post">
+                    {% csrf_token %}
+                    <input type="submit" value="Cancel Booking">
+            </form>
+                </td>
+            </tr>
+
+        {% empty %}
+            <li>No bookings found.</li>
+        {% endfor %}
+    </table>
+</body>
+</html>
